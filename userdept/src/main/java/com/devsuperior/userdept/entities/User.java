@@ -9,7 +9,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb-user")
+@Table(name = "tb_user")
 
 public class User {
 	
@@ -19,8 +19,10 @@ public class User {
 	private String name;
 	private String email;
 	
+	
 	@ManyToOne
 	@JoinColumn(name = "department_id")
+	
 	private Department department;
 	
 	public User() {	
